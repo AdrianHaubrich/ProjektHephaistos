@@ -15,6 +15,15 @@
 		A1D8CC912C08F82400467C36 /* ProjektHephaistosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D8CC902C08F82400467C36 /* ProjektHephaistosTests.swift */; };
 		A1D8CC9B2C08F82400467C36 /* ProjektHephaistosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D8CC9A2C08F82400467C36 /* ProjektHephaistosUITests.swift */; };
 		A1D8CC9D2C08F82400467C36 /* ProjektHephaistosUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D8CC9C2C08F82400467C36 /* ProjektHephaistosUITestsLaunchTests.swift */; };
+		A1D8CCAA2C08F88100467C36 /* DemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D8CCA92C08F88100467C36 /* DemoView.swift */; };
+		A1D8CCB02C09238200467C36 /* HeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D8CCAF2C09238200467C36 /* HeManager.swift */; };
+		A1D8CCB22C09239C00467C36 /* ConsoleHeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D8CCB12C09239C00467C36 /* ConsoleHeManager.swift */; };
+		A1D8CCB42C0923DA00467C36 /* HeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D8CCB32C0923DA00467C36 /* HeView.swift */; };
+		A1D8CCB62C0923F500467C36 /* PlainHeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D8CCB52C0923F500467C36 /* PlainHeView.swift */; };
+		A1D8CCB82C09240900467C36 /* HeElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D8CCB72C09240900467C36 /* HeElement.swift */; };
+		A1D8CCBA2C09242800467C36 /* HeElementType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D8CCB92C09242800467C36 /* HeElementType.swift */; };
+		A1D8CCBE2C0924B900467C36 /* HeText.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D8CCBD2C0924B900467C36 /* HeText.swift */; };
+		A1D8CCC02C0924DD00467C36 /* HeTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D8CCBF2C0924DD00467C36 /* HeTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +56,15 @@
 		A1D8CC962C08F82400467C36 /* ProjektHephaistosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProjektHephaistosUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1D8CC9A2C08F82400467C36 /* ProjektHephaistosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjektHephaistosUITests.swift; sourceTree = "<group>"; };
 		A1D8CC9C2C08F82400467C36 /* ProjektHephaistosUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjektHephaistosUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A1D8CCA92C08F88100467C36 /* DemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoView.swift; sourceTree = "<group>"; };
+		A1D8CCAF2C09238200467C36 /* HeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeManager.swift; sourceTree = "<group>"; };
+		A1D8CCB12C09239C00467C36 /* ConsoleHeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsoleHeManager.swift; sourceTree = "<group>"; };
+		A1D8CCB32C0923DA00467C36 /* HeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeView.swift; sourceTree = "<group>"; };
+		A1D8CCB52C0923F500467C36 /* PlainHeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlainHeView.swift; sourceTree = "<group>"; };
+		A1D8CCB72C09240900467C36 /* HeElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeElement.swift; sourceTree = "<group>"; };
+		A1D8CCB92C09242800467C36 /* HeElementType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeElementType.swift; sourceTree = "<group>"; };
+		A1D8CCBD2C0924B900467C36 /* HeText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeText.swift; sourceTree = "<group>"; };
+		A1D8CCBF2C0924DD00467C36 /* HeTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +115,7 @@
 		A1D8CC7B2C08F82200467C36 /* ProjektHephaistos */ = {
 			isa = PBXGroup;
 			children = (
+				A1D8CCAB2C09230E00467C36 /* Hephaistos */,
 				A1D8CC7C2C08F82200467C36 /* ProjektHephaistosApp.swift */,
 				A1D8CC7E2C08F82200467C36 /* ContentView.swift */,
 				A1D8CC802C08F82200467C36 /* Item.swift */,
@@ -130,6 +149,46 @@
 				A1D8CC9C2C08F82400467C36 /* ProjektHephaistosUITestsLaunchTests.swift */,
 			);
 			path = ProjektHephaistosUITests;
+			sourceTree = "<group>";
+		};
+		A1D8CCAB2C09230E00467C36 /* Hephaistos */ = {
+			isa = PBXGroup;
+			children = (
+				A1D8CCA92C08F88100467C36 /* DemoView.swift */,
+				A1D8CCAC2C09232000467C36 /* Manager */,
+				A1D8CCAD2C09232700467C36 /* Views */,
+				A1D8CCAE2C09235900467C36 /* Elements */,
+			);
+			path = Hephaistos;
+			sourceTree = "<group>";
+		};
+		A1D8CCAC2C09232000467C36 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				A1D8CCAF2C09238200467C36 /* HeManager.swift */,
+				A1D8CCB12C09239C00467C36 /* ConsoleHeManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		A1D8CCAD2C09232700467C36 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A1D8CCB32C0923DA00467C36 /* HeView.swift */,
+				A1D8CCB52C0923F500467C36 /* PlainHeView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A1D8CCAE2C09235900467C36 /* Elements */ = {
+			isa = PBXGroup;
+			children = (
+				A1D8CCB72C09240900467C36 /* HeElement.swift */,
+				A1D8CCB92C09242800467C36 /* HeElementType.swift */,
+				A1D8CCBD2C0924B900467C36 /* HeText.swift */,
+				A1D8CCBF2C0924DD00467C36 /* HeTextField.swift */,
+			);
+			path = Elements;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,9 +321,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1D8CCB82C09240900467C36 /* HeElement.swift in Sources */,
+				A1D8CCB62C0923F500467C36 /* PlainHeView.swift in Sources */,
+				A1D8CCB22C09239C00467C36 /* ConsoleHeManager.swift in Sources */,
+				A1D8CCB02C09238200467C36 /* HeManager.swift in Sources */,
 				A1D8CC7F2C08F82200467C36 /* ContentView.swift in Sources */,
+				A1D8CCAA2C08F88100467C36 /* DemoView.swift in Sources */,
+				A1D8CCC02C0924DD00467C36 /* HeTextField.swift in Sources */,
+				A1D8CCBE2C0924B900467C36 /* HeText.swift in Sources */,
 				A1D8CC812C08F82200467C36 /* Item.swift in Sources */,
 				A1D8CC7D2C08F82200467C36 /* ProjektHephaistosApp.swift in Sources */,
+				A1D8CCB42C0923DA00467C36 /* HeView.swift in Sources */,
+				A1D8CCBA2C09242800467C36 /* HeElementType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
