@@ -7,18 +7,19 @@
 
 import SwiftUI
 
-struct PlainHeView: HeView {
+struct CustomHeView: HeView {
     let id: String = UUID().uuidString
-    var elements: [any HeElement]
+    var items: [any HeItem]
     
-    func getData() -> [any HeElementData] {
-        return elements.map { $0.data }
+    func getData() -> any HeElementData {
+        let elementsData = items.map { $0.getData() }
+        return HeViewData(elements: elementsData)
     }
     
     func render() -> AnyView {
         AnyView(
-            ForEach(0..<elements.count, id: \.self) { index in
-                elements[index].render()
+            ForEach(0..<items.count, id: \.self) { index in
+                items[index].render()
             }
         )
     }

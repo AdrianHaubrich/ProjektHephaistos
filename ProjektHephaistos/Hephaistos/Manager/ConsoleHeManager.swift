@@ -11,16 +11,12 @@ class ConsoleHeManager: HeManager {
     func save(_ heView: any HeView) {
         let data = heView.getData()
         
-        do {
-            let encoder = JSONEncoder()
-            encoder.outputFormatting = .prettyPrinted
-            
-            let jsonData = try encoder.encode(data.map { AnyEncodable($0) })
-            if let jsonString = String(data: jsonData, encoding: .utf8) {
-                print(jsonString)
-            }
-        } catch {
-            print("Failed to encode data to JSON: \(error)")
+        let encoder = JSONEncoder()
+        encoder.outputFormatting = .prettyPrinted
+        
+        if let jsonData = try? encoder.encode(AnyEncodable(data)),
+           let jsonString = String(data: jsonData, encoding: .utf8) {
+            print(jsonString)
         }
     }
 }

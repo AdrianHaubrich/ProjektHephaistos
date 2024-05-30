@@ -7,9 +7,6 @@
 
 import SwiftUI
 
-protocol HeView: Identifiable {
-    var elements: [any HeElement] { get set }
-    
-    func getData() -> [any HeElementData]
-    @ViewBuilder func render() -> AnyView
+protocol HeView: HeItem, Identifiable {
+    var items: [any HeItem] { get set }
 }

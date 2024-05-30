@@ -14,6 +14,10 @@ struct HeTextField: HeElement {
         self.data = data
     }
     
+    func getData() -> any HeElementData {
+        return data
+    }
+    
     func render() -> AnyView {
         AnyView(
             HeTextFieldView(placeholder: data.placeholder, text: $data.text)

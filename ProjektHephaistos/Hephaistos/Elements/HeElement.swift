@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-protocol HeElement {
+protocol HeElement: HeItem {
     associatedtype DataType: HeElementData
     var data: DataType { get set }
     

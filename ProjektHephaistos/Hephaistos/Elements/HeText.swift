@@ -14,6 +14,10 @@ struct HeText: HeElement {
         self.data = data
     }
     
+    func getData() -> any HeElementData {
+        return data
+    }
+    
     func render() -> AnyView {
         AnyView(
             HeTextView(text: data.text)
