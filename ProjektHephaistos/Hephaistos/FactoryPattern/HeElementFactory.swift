@@ -9,4 +9,5 @@ import Foundation
 
 protocol HeElementFactory: HeItemFactory {
     func create(from data: any HeElementData) -> any HeElement
+    func getDataType() -> any HeElementData.Type
 }

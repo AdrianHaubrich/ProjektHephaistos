@@ -30,4 +30,15 @@ class HeItemRegistry {
         }
         return nil
     }
+    
+    func getElementDataType(type: HeItemType) -> (any HeElementData.Type)? {
+        if let factory = factories[type] {
+            return factory.getDataType()
+        }
+        return nil
+    }
+    
+    func getViewDataType(type: HeItemType) -> HeViewData.Type {
+        return HeViewData.self
+    }
 }

@@ -19,4 +19,8 @@ class HeTextFieldFactory: NSObject, HeElementFactory {
         }
         return HeTextField(data)
     }
+    
+    func getDataType() -> any HeElementData.Type {
+        return HeTextFieldData.self
+    }
 }

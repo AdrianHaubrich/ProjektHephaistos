@@ -24,7 +24,7 @@ extension HeViewData: Codable {
         
         var elementsContainer = container.nestedUnkeyedContainer(forKey: .elements)
         for element in elements {
-            try elementsContainer.encode(AnyCodable(element))
+            try elementsContainer.encode(AnyHeCodable(element))
         }
     }
     
@@ -36,7 +36,7 @@ extension HeViewData: Codable {
         var elements = [any HeElementData]()
         
         while !elementsContainer.isAtEnd {
-            let element = try elementsContainer.decode(AnyCodable.self).value
+            let element = try elementsContainer.decode(AnyHeCodable.self).value
             elements.append(element)
         }
         

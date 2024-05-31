@@ -26,7 +26,7 @@
 		A1D8CCC22C0933CE00467C36 /* CardHeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D8CCC12C0933CE00467C36 /* CardHeView.swift */; };
 		A1D8CCC52C0937CA00467C36 /* HeItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D8CCC42C0937CA00467C36 /* HeItem.swift */; };
 		A1D8CCC72C0937E900467C36 /* HeViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D8CCC62C0937E900467C36 /* HeViewData.swift */; };
-		A1D8CCC92C093C2100467C36 /* AnyCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D8CCC82C093C2100467C36 /* AnyCodable.swift */; };
+		A1D8CCC92C093C2100467C36 /* AnyHeCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D8CCC82C093C2100467C36 /* AnyHeCodable.swift */; };
 		A1F9D3F62C0A0AC100257D54 /* HeElementFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F9D3F52C0A0AC100257D54 /* HeElementFactory.swift */; };
 		A1F9D3F82C0A0AD400257D54 /* HeViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F9D3F72C0A0AD400257D54 /* HeViewFactory.swift */; };
 		A1F9D3FA2C0A0AE600257D54 /* HeItemRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F9D3F92C0A0AE600257D54 /* HeItemRegistry.swift */; };
@@ -83,7 +83,7 @@
 		A1D8CCC12C0933CE00467C36 /* CardHeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardHeView.swift; sourceTree = "<group>"; };
 		A1D8CCC42C0937CA00467C36 /* HeItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeItem.swift; sourceTree = "<group>"; };
 		A1D8CCC62C0937E900467C36 /* HeViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeViewData.swift; sourceTree = "<group>"; };
-		A1D8CCC82C093C2100467C36 /* AnyCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyCodable.swift; sourceTree = "<group>"; };
+		A1D8CCC82C093C2100467C36 /* AnyHeCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyHeCodable.swift; sourceTree = "<group>"; };
 		A1F9D3F52C0A0AC100257D54 /* HeElementFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeElementFactory.swift; sourceTree = "<group>"; };
 		A1F9D3F72C0A0AD400257D54 /* HeViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeViewFactory.swift; sourceTree = "<group>"; };
 		A1F9D3F92C0A0AE600257D54 /* HeItemRegistry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeItemRegistry.swift; sourceTree = "<group>"; };
@@ -199,7 +199,7 @@
 			children = (
 				A1D8CCAF2C09238200467C36 /* HeManager.swift */,
 				A1D8CCB12C09239C00467C36 /* ConsoleHeManager.swift */,
-				A1D8CCC82C093C2100467C36 /* AnyCodable.swift */,
+				A1D8CCC82C093C2100467C36 /* AnyHeCodable.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -471,7 +471,7 @@
 				A1D8CC7D2C08F82200467C36 /* ProjektHephaistosApp.swift in Sources */,
 				A1D8CCB42C0923DA00467C36 /* HeView.swift in Sources */,
 				A1D8CCC22C0933CE00467C36 /* CardHeView.swift in Sources */,
-				A1D8CCC92C093C2100467C36 /* AnyCodable.swift in Sources */,
+				A1D8CCC92C093C2100467C36 /* AnyHeCodable.swift in Sources */,
 				A1D8CCBA2C09242800467C36 /* HeItemType.swift in Sources */,
 				A1D8CCC52C0937CA00467C36 /* HeItem.swift in Sources */,
 			);
