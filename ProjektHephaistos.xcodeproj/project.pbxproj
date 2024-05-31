@@ -219,7 +219,6 @@
 			isa = PBXGroup;
 			children = (
 				A1D8CCB72C09240900467C36 /* HeElement.swift */,
-				A1D8CCB92C09242800467C36 /* HeItemType.swift */,
 				A1F9D3FB2C0A0B0400257D54 /* HeText */,
 				A1F9D3FE2C0A0B2900257D54 /* HeTextField */,
 			);
@@ -230,6 +229,7 @@
 			isa = PBXGroup;
 			children = (
 				A1D8CCC42C0937CA00467C36 /* HeItem.swift */,
+				A1D8CCB92C09242800467C36 /* HeItemType.swift */,
 				A1D8CCAD2C09232700467C36 /* Views */,
 				A1D8CCAE2C09235900467C36 /* Elements */,
 			);
