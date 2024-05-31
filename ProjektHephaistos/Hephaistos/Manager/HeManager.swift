@@ -8,6 +8,6 @@
 import Foundation
 
 protocol HeManager {
-    func save(_ heView: any HeView)
-    func load(from jsonString: String) -> (any HeView)?
+    func save(_ heItem: any HeItem)
+    func load(from jsonString: String) -> (any HeItem)?
 }

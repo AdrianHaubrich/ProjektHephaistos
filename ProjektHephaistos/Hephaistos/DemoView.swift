@@ -9,7 +9,7 @@ import SwiftUI
 
 struct DemoView: View {
     let heManager: HeManager = ConsoleHeManager()
-    @State var heView: any HeView = PlainHeView(items: [
+    @State var heItem: any HeItem = PlainHeView(items: [
         HeText(.init(text: "Text")),
         HeTextField(.init(placeholder: "Enter text here", text: "Some text")),
         CardHeView(items: [
@@ -20,16 +20,16 @@ struct DemoView: View {
     
     var body: some View {
         VStack {
-            heView.render()
+            heItem.render()
             
             Button("Print") {
-                heManager.save(heView)
+                heManager.save(heItem)
             }
             
             Button("Load") {
                 let data = """
               {
-                "type" : "plainHeView",
+                "type" : "cardHeView",
                 "elements" : [
                   {
                     "type" : "heText",
@@ -61,7 +61,7 @@ struct DemoView: View {
                 ]
               }
 """
-                heView = heManager.load(from: data)!
+                heItem = heManager.load(from: data)!
             }
         }
     }
