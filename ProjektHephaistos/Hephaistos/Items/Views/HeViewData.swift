@@ -24,7 +24,7 @@ extension HeViewData: Codable {
         
         var elementsContainer = container.nestedUnkeyedContainer(forKey: .elements)
         for element in elements {
-            try elementsContainer.encode(AnyEncodable(element))
+            try elementsContainer.encode(AnyCodable(element))
         }
     }
     
@@ -37,24 +37,7 @@ extension HeViewData: Codable {
         
         while !elementsContainer.isAtEnd {
             let element = try elementsContainer.decode(AnyCodable.self).value
-            switch element.type {
-            case .heText:
-                if let element = element as? HeTextData {
-                    elements.append(element)
-                }
-            case .heTextField:
-                if let element = element as? HeTextFieldData {
-                    elements.append(element)
-                }
-            case .plainHeView:
-                if let element = element as? HeViewData {
-                    elements.append(element)
-                }
-            case .cardHeView:
-                if let element = element as? HeViewData {
-                    elements.append(element)
-                }
-            }
+            elements.append(element)
         }
         
         self.elements = elements

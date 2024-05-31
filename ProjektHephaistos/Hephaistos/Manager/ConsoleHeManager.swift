@@ -40,54 +40,12 @@ class ConsoleHeManager: HeManager {
     private func convertToHeView(from data: HeViewData) -> any HeView {
         var items: [any HeItem] = []
         
-        for element in data.elements {
-            switch element.type {
-            case .heText:
-                if let textData = element as? HeTextData {
-                    items.append(HeText(textData))
-                }
-            case .heTextField:
-                if let textFieldData = element as? HeTextFieldData {
-                    items.append(HeTextField(textFieldData))
-                }
-            case .plainHeView:
-                if let viewData = element as? HeViewData {
-                    items.append(convertToHeView(from: viewData))
-                }
-            case .cardHeView:
-                if let viewData = element as? HeViewData {
-                    items.append(convertToCardHeView(from: viewData))
-                }
+        for elementData in data.elements {
+            if let element = HeItemRegistry.shared.create(from: elementData) {
+                items.append(element)
             }
         }
         
         return PlainHeView(items: items)
-    }
-    
-    private func convertToCardHeView(from data: HeViewData) -> any HeView {
-        var items: [any HeItem] = []
-        
-        for element in data.elements {
-            switch element.type {
-            case .heText:
-                if let textData = element as? HeTextData {
-                    items.append(HeText(textData))
-                }
-            case .heTextField:
-                if let textFieldData = element as? HeTextFieldData {
-                    items.append(HeTextField(textFieldData))
-                }
-            case .plainHeView:
-                if let viewData = element as? HeViewData {
-                    items.append(convertToHeView(from: viewData))
-                }
-            case .cardHeView:
-                if let cardViewData = element as? HeViewData {
-                    items.append(convertToCardHeView(from: cardViewData))
-                }
-            }
-        }
-        
-        return CardHeView(items: items)
     }
 }

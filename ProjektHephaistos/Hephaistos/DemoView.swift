@@ -17,7 +17,6 @@ struct DemoView: View {
             HeTextField(.init(placeholder: "Nested enter text", text: "Nested text"))
         ])
     ])
-    // @State var heView: any HeView = PlainHeView(items: [])
     
     var body: some View {
         VStack {

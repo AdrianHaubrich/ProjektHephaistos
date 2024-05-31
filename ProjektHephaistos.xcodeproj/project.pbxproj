@@ -28,6 +28,13 @@
 		A1D8CCC52C0937CA00467C36 /* HeItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D8CCC42C0937CA00467C36 /* HeItem.swift */; };
 		A1D8CCC72C0937E900467C36 /* HeViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D8CCC62C0937E900467C36 /* HeViewData.swift */; };
 		A1D8CCC92C093C2100467C36 /* AnyCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D8CCC82C093C2100467C36 /* AnyCodable.swift */; };
+		A1F9D3F62C0A0AC100257D54 /* HeElementFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F9D3F52C0A0AC100257D54 /* HeElementFactory.swift */; };
+		A1F9D3F82C0A0AD400257D54 /* HeViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F9D3F72C0A0AD400257D54 /* HeViewFactory.swift */; };
+		A1F9D3FA2C0A0AE600257D54 /* HeItemRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F9D3F92C0A0AE600257D54 /* HeItemRegistry.swift */; };
+		A1F9D3FD2C0A0B1B00257D54 /* HeTextFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F9D3FC2C0A0B1B00257D54 /* HeTextFactory.swift */; };
+		A1F9D4002C0A0B3F00257D54 /* HeTextFieldFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F9D3FF2C0A0B3F00257D54 /* HeTextFieldFactory.swift */; };
+		A1F9D4042C0A0B8000257D54 /* PlainHeViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F9D4032C0A0B8000257D54 /* PlainHeViewFactory.swift */; };
+		A1F9D4062C0A0B9400257D54 /* CardHeViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F9D4052C0A0B9400257D54 /* CardHeViewFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +80,13 @@
 		A1D8CCC42C0937CA00467C36 /* HeItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeItem.swift; sourceTree = "<group>"; };
 		A1D8CCC62C0937E900467C36 /* HeViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeViewData.swift; sourceTree = "<group>"; };
 		A1D8CCC82C093C2100467C36 /* AnyCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyCodable.swift; sourceTree = "<group>"; };
+		A1F9D3F52C0A0AC100257D54 /* HeElementFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeElementFactory.swift; sourceTree = "<group>"; };
+		A1F9D3F72C0A0AD400257D54 /* HeViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeViewFactory.swift; sourceTree = "<group>"; };
+		A1F9D3F92C0A0AE600257D54 /* HeItemRegistry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeItemRegistry.swift; sourceTree = "<group>"; };
+		A1F9D3FC2C0A0B1B00257D54 /* HeTextFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeTextFactory.swift; sourceTree = "<group>"; };
+		A1F9D3FF2C0A0B3F00257D54 /* HeTextFieldFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeTextFieldFactory.swift; sourceTree = "<group>"; };
+		A1F9D4032C0A0B8000257D54 /* PlainHeViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlainHeViewFactory.swift; sourceTree = "<group>"; };
+		A1F9D4052C0A0B9400257D54 /* CardHeViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardHeViewFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				A1D8CCA92C08F88100467C36 /* DemoView.swift */,
+				A1F9D3F42C0A0AAE00257D54 /* FactoryPattern */,
 				A1D8CCAC2C09232000467C36 /* Manager */,
 				A1D8CCC32C0937B600467C36 /* Items */,
 			);
@@ -184,8 +199,8 @@
 			children = (
 				A1D8CCB32C0923DA00467C36 /* HeView.swift */,
 				A1D8CCC62C0937E900467C36 /* HeViewData.swift */,
-				A1D8CCB52C0923F500467C36 /* PlainHeView.swift */,
-				A1D8CCC12C0933CE00467C36 /* CardHeView.swift */,
+				A1F9D4012C0A0B5100257D54 /* PlainHeView */,
+				A1F9D4022C0A0B6400257D54 /* CardHeView */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -195,8 +210,8 @@
 			children = (
 				A1D8CCB72C09240900467C36 /* HeElement.swift */,
 				A1D8CCB92C09242800467C36 /* HeItemType.swift */,
-				A1D8CCBD2C0924B900467C36 /* HeText.swift */,
-				A1D8CCBF2C0924DD00467C36 /* HeTextField.swift */,
+				A1F9D3FB2C0A0B0400257D54 /* HeText */,
+				A1F9D3FE2C0A0B2900257D54 /* HeTextField */,
 			);
 			path = Elements;
 			sourceTree = "<group>";
@@ -209,6 +224,52 @@
 				A1D8CCAE2C09235900467C36 /* Elements */,
 			);
 			path = Items;
+			sourceTree = "<group>";
+		};
+		A1F9D3F42C0A0AAE00257D54 /* FactoryPattern */ = {
+			isa = PBXGroup;
+			children = (
+				A1F9D3F52C0A0AC100257D54 /* HeElementFactory.swift */,
+				A1F9D3F72C0A0AD400257D54 /* HeViewFactory.swift */,
+				A1F9D3F92C0A0AE600257D54 /* HeItemRegistry.swift */,
+			);
+			path = FactoryPattern;
+			sourceTree = "<group>";
+		};
+		A1F9D3FB2C0A0B0400257D54 /* HeText */ = {
+			isa = PBXGroup;
+			children = (
+				A1D8CCBD2C0924B900467C36 /* HeText.swift */,
+				A1F9D3FC2C0A0B1B00257D54 /* HeTextFactory.swift */,
+			);
+			path = HeText;
+			sourceTree = "<group>";
+		};
+		A1F9D3FE2C0A0B2900257D54 /* HeTextField */ = {
+			isa = PBXGroup;
+			children = (
+				A1D8CCBF2C0924DD00467C36 /* HeTextField.swift */,
+				A1F9D3FF2C0A0B3F00257D54 /* HeTextFieldFactory.swift */,
+			);
+			path = HeTextField;
+			sourceTree = "<group>";
+		};
+		A1F9D4012C0A0B5100257D54 /* PlainHeView */ = {
+			isa = PBXGroup;
+			children = (
+				A1D8CCB52C0923F500467C36 /* PlainHeView.swift */,
+				A1F9D4032C0A0B8000257D54 /* PlainHeViewFactory.swift */,
+			);
+			path = PlainHeView;
+			sourceTree = "<group>";
+		};
+		A1F9D4022C0A0B6400257D54 /* CardHeView */ = {
+			isa = PBXGroup;
+			children = (
+				A1D8CCC12C0933CE00467C36 /* CardHeView.swift */,
+				A1F9D4052C0A0B9400257D54 /* CardHeViewFactory.swift */,
+			);
+			path = CardHeView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -341,8 +402,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1F9D3FD2C0A0B1B00257D54 /* HeTextFactory.swift in Sources */,
 				A1D8CCC72C0937E900467C36 /* HeViewData.swift in Sources */,
 				A1D8CCB82C09240900467C36 /* HeElement.swift in Sources */,
+				A1F9D4062C0A0B9400257D54 /* CardHeViewFactory.swift in Sources */,
+				A1F9D4002C0A0B3F00257D54 /* HeTextFieldFactory.swift in Sources */,
+				A1F9D3F62C0A0AC100257D54 /* HeElementFactory.swift in Sources */,
+				A1F9D4042C0A0B8000257D54 /* PlainHeViewFactory.swift in Sources */,
 				A1D8CCB62C0923F500467C36 /* PlainHeView.swift in Sources */,
 				A1D8CCB22C09239C00467C36 /* ConsoleHeManager.swift in Sources */,
 				A1D8CCB02C09238200467C36 /* HeManager.swift in Sources */,
@@ -350,6 +416,8 @@
 				A1D8CCAA2C08F88100467C36 /* DemoView.swift in Sources */,
 				A1D8CCC02C0924DD00467C36 /* HeTextField.swift in Sources */,
 				A1D8CCBE2C0924B900467C36 /* HeText.swift in Sources */,
+				A1F9D3F82C0A0AD400257D54 /* HeViewFactory.swift in Sources */,
+				A1F9D3FA2C0A0AE600257D54 /* HeItemRegistry.swift in Sources */,
 				A1D8CC812C08F82200467C36 /* Item.swift in Sources */,
 				A1D8CC7D2C08F82200467C36 /* ProjektHephaistosApp.swift in Sources */,
 				A1D8CCB42C0923DA00467C36 /* HeView.swift in Sources */,
