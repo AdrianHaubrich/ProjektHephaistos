@@ -35,6 +35,8 @@
 		A1F9D4002C0A0B3F00257D54 /* HeTextFieldFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F9D3FF2C0A0B3F00257D54 /* HeTextFieldFactory.swift */; };
 		A1F9D4042C0A0B8000257D54 /* PlainHeViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F9D4032C0A0B8000257D54 /* PlainHeViewFactory.swift */; };
 		A1F9D4062C0A0B9400257D54 /* CardHeViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F9D4052C0A0B9400257D54 /* CardHeViewFactory.swift */; };
+		A1F9D4082C0A15A800257D54 /* HeItemFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F9D4072C0A15A800257D54 /* HeItemFactory.swift */; };
+		A1F9D40A2C0A15C400257D54 /* AutoRegisteringFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F9D4092C0A15C400257D54 /* AutoRegisteringFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +89,8 @@
 		A1F9D3FF2C0A0B3F00257D54 /* HeTextFieldFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeTextFieldFactory.swift; sourceTree = "<group>"; };
 		A1F9D4032C0A0B8000257D54 /* PlainHeViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlainHeViewFactory.swift; sourceTree = "<group>"; };
 		A1F9D4052C0A0B9400257D54 /* CardHeViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardHeViewFactory.swift; sourceTree = "<group>"; };
+		A1F9D4072C0A15A800257D54 /* HeItemFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeItemFactory.swift; sourceTree = "<group>"; };
+		A1F9D4092C0A15C400257D54 /* AutoRegisteringFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoRegisteringFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -229,9 +233,11 @@
 		A1F9D3F42C0A0AAE00257D54 /* FactoryPattern */ = {
 			isa = PBXGroup;
 			children = (
+				A1F9D4072C0A15A800257D54 /* HeItemFactory.swift */,
 				A1F9D3F52C0A0AC100257D54 /* HeElementFactory.swift */,
 				A1F9D3F72C0A0AD400257D54 /* HeViewFactory.swift */,
 				A1F9D3F92C0A0AE600257D54 /* HeItemRegistry.swift */,
+				A1F9D4092C0A15C400257D54 /* AutoRegisteringFactory.swift */,
 			);
 			path = FactoryPattern;
 			sourceTree = "<group>";
@@ -412,8 +418,10 @@
 				A1D8CCB62C0923F500467C36 /* PlainHeView.swift in Sources */,
 				A1D8CCB22C09239C00467C36 /* ConsoleHeManager.swift in Sources */,
 				A1D8CCB02C09238200467C36 /* HeManager.swift in Sources */,
+				A1F9D4082C0A15A800257D54 /* HeItemFactory.swift in Sources */,
 				A1D8CC7F2C08F82200467C36 /* ContentView.swift in Sources */,
 				A1D8CCAA2C08F88100467C36 /* DemoView.swift in Sources */,
+				A1F9D40A2C0A15C400257D54 /* AutoRegisteringFactory.swift in Sources */,
 				A1D8CCC02C0924DD00467C36 /* HeTextField.swift in Sources */,
 				A1D8CCBE2C0924B900467C36 /* HeText.swift in Sources */,
 				A1F9D3F82C0A0AD400257D54 /* HeViewFactory.swift in Sources */,

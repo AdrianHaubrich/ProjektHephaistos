@@ -24,11 +24,7 @@ struct ProjektHephaistosApp: App {
     }()
     
     init() {
-        // Register factories
-        HeItemRegistry.shared.register(HeTextFactory(), for: .heText)
-        HeItemRegistry.shared.register(HeTextFieldFactory(), for: .heTextField)
-        HeItemRegistry.shared.registerView(PlainHeViewFactory(), for: .plainHeView)
-        HeItemRegistry.shared.registerView(CardHeViewFactory(), for: .cardHeView)
+        autoRegisterFactories()
     }
 
     var body: some Scene {

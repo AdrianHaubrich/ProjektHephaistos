@@ -7,6 +7,6 @@
 
 import Foundation
 
-protocol HeViewFactory {
+protocol HeViewFactory: HeItemFactory {
     func create(from data: any HeElementData) -> any HeView
 }

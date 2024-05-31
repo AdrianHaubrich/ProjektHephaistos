@@ -7,7 +7,12 @@
 
 import Foundation
 
-struct PlainHeViewFactory: HeViewFactory {
+@objc(PlainHeViewFactory)
+class PlainHeViewFactory: NSObject, HeViewFactory {
+    static var itemType: HeItemType { .plainHeView }
+    
+    required override init() {}
+    
     func create(from data: any HeElementData) -> any HeView {
         guard let data = data as? HeViewData else {
             fatalError("Invalid data type for CustomHeView")

@@ -18,7 +18,7 @@ class HeItemRegistry {
         factories[type] = factory
     }
     
-    func registerView<T: HeViewFactory>(_ factory: T, for type: HeItemType) {
+    func register<T: HeViewFactory>(_ factory: T, for type: HeItemType) {
         viewFactories[type] = factory
     }
     

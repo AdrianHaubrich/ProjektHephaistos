@@ -7,7 +7,12 @@
 
 import Foundation
 
-struct CardHeViewFactory: HeViewFactory {
+@objc(CardHeViewFactory)
+class CardHeViewFactory: NSObject, HeViewFactory {
+    static var itemType: HeItemType { .cardHeView }
+    
+    required override init() {}
+    
     func create(from data: any HeElementData) -> any HeView {
         guard let data = data as? HeViewData else {
             fatalError("Invalid data type for CardHeView")

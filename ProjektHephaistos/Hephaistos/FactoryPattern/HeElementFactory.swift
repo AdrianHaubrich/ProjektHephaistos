@@ -7,6 +7,6 @@
 
 import Foundation
 
-protocol HeElementFactory {
+protocol HeElementFactory: HeItemFactory {
     func create(from data: any HeElementData) -> any HeElement
 }

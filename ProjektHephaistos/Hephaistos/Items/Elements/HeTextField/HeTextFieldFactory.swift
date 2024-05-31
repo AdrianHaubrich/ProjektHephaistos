@@ -7,7 +7,12 @@
 
 import Foundation
 
-struct HeTextFieldFactory: HeElementFactory {
+@objc(HeTextFieldFactory)
+class HeTextFieldFactory: NSObject, HeElementFactory {
+    static var itemType: HeItemType { .heTextField }
+    
+    required override init() {}
+    
     func create(from data: any HeElementData) -> any HeElement {
         guard let data = data as? HeTextFieldData else {
             fatalError("Invalid data type for HeTextField")
