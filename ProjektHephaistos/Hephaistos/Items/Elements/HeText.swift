@@ -26,8 +26,8 @@ struct HeText: HeElement {
 }
 
 struct HeTextData: HeElementData {
-    var type: HeElementType = .heText
-    let text: String
+    var type: HeItemType = .heText
+    var text: String
 }
 
 struct HeTextView: View {

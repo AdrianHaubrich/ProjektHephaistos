@@ -19,17 +19,75 @@ class ConsoleHeManager: HeManager {
             print(jsonString)
         }
     }
-}
-
-// Wrapper to encode heterogeneous collections
-struct AnyEncodable: Encodable {
-    private let encodable: Encodable
     
-    init(_ encodable: Encodable) {
-        self.encodable = encodable
+    func load(from jsonString: String) -> (any HeView)? {
+        let decoder = JSONDecoder()
+        
+        guard let jsonData = jsonString.data(using: .utf8) else {
+            print("Failed to convert JSON string to data")
+            return nil
+        }
+        
+        do {
+            let heViewData = try decoder.decode(HeViewData.self, from: jsonData)
+            return convertToHeView(from: heViewData)
+        } catch {
+            print("Failed to decode JSON: \(error)")
+            return nil
+        }
     }
     
-    func encode(to encoder: Encoder) throws {
-        try encodable.encode(to: encoder)
+    private func convertToHeView(from data: HeViewData) -> any HeView {
+        var items: [any HeItem] = []
+        
+        for element in data.elements {
+            switch element.type {
+            case .heText:
+                if let textData = element as? HeTextData {
+                    items.append(HeText(textData))
+                }
+            case .heTextField:
+                if let textFieldData = element as? HeTextFieldData {
+                    items.append(HeTextField(textFieldData))
+                }
+            case .plainHeView:
+                if let viewData = element as? HeViewData {
+                    items.append(convertToHeView(from: viewData))
+                }
+            case .cardHeView:
+                if let viewData = element as? HeViewData {
+                    items.append(convertToCardHeView(from: viewData))
+                }
+            }
+        }
+        
+        return PlainHeView(items: items)
+    }
+    
+    private func convertToCardHeView(from data: HeViewData) -> any HeView {
+        var items: [any HeItem] = []
+        
+        for element in data.elements {
+            switch element.type {
+            case .heText:
+                if let textData = element as? HeTextData {
+                    items.append(HeText(textData))
+                }
+            case .heTextField:
+                if let textFieldData = element as? HeTextFieldData {
+                    items.append(HeTextField(textFieldData))
+                }
+            case .plainHeView:
+                if let viewData = element as? HeViewData {
+                    items.append(convertToHeView(from: viewData))
+                }
+            case .cardHeView:
+                if let cardViewData = element as? HeViewData {
+                    items.append(convertToCardHeView(from: cardViewData))
+                }
+            }
+        }
+        
+        return CardHeView(items: items)
     }
 }

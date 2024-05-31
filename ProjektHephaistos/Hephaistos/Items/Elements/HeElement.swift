@@ -8,12 +8,9 @@
 import SwiftUI
 
 protocol HeElement: HeItem {
-    associatedtype DataType: HeElementData
-    var data: DataType { get set }
-    
     @ViewBuilder func render() -> AnyView
 }
 
 protocol HeElementData: Codable {
-    var type: HeElementType { get }
+    var type: HeItemType { get }
 }

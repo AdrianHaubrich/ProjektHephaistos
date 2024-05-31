@@ -3,22 +3,4 @@
    uuid = "30FFB930-0868-4593-A282-6AFE84BCAD35"
    type = "1"
    version = "2.0">
-   <Breakpoints>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "E246AF79-B84E-4475-9C35-90928EBD915D"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "../../../../var/folders/kt/95w50jvd5dd_fcz8092r9nvc0000gn/T/swift-generated-sources/@__swiftmacro_17ProjektHephaistos15HeTextFieldData10ObservablefMm_.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1"
-            endingLineNumber = "1"
-            landmarkName = "unknown"
-            landmarkType = "0">
-         </BreakpointContent>
-      </BreakpointProxy>
-   </Breakpoints>
 </Bucket>
